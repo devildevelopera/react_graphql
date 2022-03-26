@@ -1,0 +1,11 @@
+type Query {
+  filmsByDirectorName(directorName: String): [Film]
+}
+
+type Film {
+  name: ID # The unique id of this film
+  length: Int # The duration of this film, in minutes.
+  rating: Float # The IMDb rating for the film.
+  releaseDate: String # The date in which the film was released in the United Kingdom, in ISO 8601 date format.
+  directorName: String # The name of the director who directed the film.
+}
