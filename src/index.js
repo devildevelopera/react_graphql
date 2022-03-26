@@ -1,15 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { ApolloProvider } from 'react-apollo';
-import { ApolloClient } from 'apollo-client';
-import { HttpLink } from 'apollo-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import React from "react";
+import ReactDOM from "react-dom";
+import { ApolloProvider } from "react-apollo";
+import { ApolloClient } from "apollo-client";
+import { HttpLink } from "apollo-link-http";
+import { InMemoryCache } from "apollo-cache-inmemory";
 
-import App from './App';
+import App from "./App";
 
-import './style.css';
-
-const FILMS_URL = 'https://app.codescreen.com/api/assessments/gql/films';
+const FILMS_URL = "https://app.codescreen.com/api/assessments/gql/films";
 const httpLink = new HttpLink({
   uri: FILMS_URL,
   headers: {
@@ -28,5 +26,5 @@ ReactDOM.render(
   <ApolloProvider client={client}>
     <App />
   </ApolloProvider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
